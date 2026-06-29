@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id" class="bg-[#0a0a0a] text-neutral-300 selection:bg-red-600 selection:text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Data Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-4 md:p-12 font-mono">
+    
+    <div class="max-w-6xl mx-auto">
+        <header class="mb-10 border-b border-neutral-800 pb-4">
+            <h1 class="text-2xl font-bold text-white">ADMINISTRATOR CONSOLE</h1>
+            <p class="text-sm text-neutral-500">Repository Data Generator</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="bg-[#111111] border border-neutral-800 p-6 md:p-8">
+                <h2 class="text-lg font-bold text-white mb-6 border-l-4 border-red-600 pl-3">INPUT DATA TARGET</h2>
+                
+                <form id="generator-form" class="space-y-5">
+                    <div>
+                        <label class="block text-xs text-neutral-500 mb-2">NAMA TARGET / REPOSITORI</label>
+                        <input type="text" id="input-name" required class="w-full bg-[#1a1a1a] border border-neutral-700 text-white p-3 outline-none focus:border-red-600 transition-colors">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs text-neutral-500 mb-2">URL SUMBER (GITHUB / WEB)</label>
+                        <input type="url" id="input-url" required class="w-full bg-[#1a1a1a] border border-neutral-700 text-white p-3 outline-none focus:border-red-600 transition-colors">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-xs text-neutral-500 mb-2">KETERANGAN / DETAIL CLONING</label>
+                        <textarea id="input-desc" required rows="4" class="w-full bg-[#1a1a1a] border border-neutral-700 text-white p-3 outline-none focus:border-red-600 transition-colors resize-none"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-white text-black font-bold py-3 hover:bg-neutral-300 transition-colors mt-4">
+                        GENERATE HTML BLOCK
+                    </button>
+                </form>
+            </div>
+            
+            <div class="bg-[#111111] border border-neutral-800 p-6 md:p-8 flex flex-col">
+                <h2 class="text-lg font-bold text-white mb-6 border-l-4 border-neutral-500 pl-3">OUTPUT CODE</h2>
+                
+                <textarea id="output-code" readonly class="flex-grow w-full bg-[#050505] border border-neutral-800 text-green-500 p-4 font-mono text-sm outline-none resize-none mb-5"></textarea>
+                
+                <button id="btn-copy" class="w-full bg-red-600 text-white font-bold py-3 hover:bg-red-700 transition-colors">
+                    COPY TO CLIPBOARD
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
