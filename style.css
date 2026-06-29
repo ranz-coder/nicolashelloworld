@@ -1,3 +1,13 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 .card-item {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.card-item:hover {
+    background-color: #222222;
+    border-color: #404040;
 }
