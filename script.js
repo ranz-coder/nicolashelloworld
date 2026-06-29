@@ -12,7 +12,7 @@ document.addEventListener('contextmenu', (e) => {
 document.addEventListener('keydown', (e) => {
     if (
         e.key === 'F12' || 
-        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j')) || 
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) || 
         (e.ctrlKey && (e.key === 'U' || e.key === 'u')) ||
         (e.ctrlKey && (e.key === 'S' || e.key === 's'))
     ) {
@@ -43,17 +43,17 @@ window.addEventListener('DOMContentLoaded', () => {
     gsap.to("#app-container", {
         opacity: 1,
         y: 0,
-        duration: 1,
-        yStart: 30,
-        ease: "power4.out"
+        duration: 0.6,
+        yStart: 15,
+        ease: "power2.out"
     });
 
     gsap.from(".card-item", {
         opacity: 0,
-        x: -20,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
-        delay: 0.4
+        y: 10,
+        duration: 0.4,
+        stagger: 0.1,
+        ease: "power2.out",
+        delay: 0.3
     });
 });
